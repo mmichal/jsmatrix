@@ -4,9 +4,9 @@ test( "hello test", function() {
 });
 */
 
-var matrix = new Matrix(2, 3);
 
 test("empty matrix creation", function() {
+  var matrix = new Matrix(2, 3);
   deepEqual(
     matrix.content,
     [
