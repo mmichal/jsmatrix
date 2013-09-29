@@ -25,9 +25,9 @@ function Matrix() {
         }
 
         for (var col = 0; col < this.cols; col++) {
-          if (isNaN(arguments[0][row][col]) {
-            throw ]
-            'Element (' + row + ', ' + col + ') of the Array is not numeric.';
+          if (isNaN(arguments[0][row][col])) {
+            throw 'Element ('
+              + row + ', ' + col + ') of the Array is not numeric.';
           }
           this.content[row][col] = arguments[0][row][col];
         }
