@@ -13,12 +13,12 @@ function Matrix() {
 
   } else if (arguments[0] instanceof Array) {
     this.rows = arguments[0].length;
-    this.cols = arguments[0][1].length;
+    this.cols = arguments[0][0].length;
 
     for (var row = 0; row < this.rows; row++) {
       if (
         arguments[0] instanceof Array
-        && !arguments[0][row].length >= this.cols
+        && arguments[0][row].length <= this.cols
       ) {
         if (!this.content[row]) {
           this.content[row] = [];
@@ -32,7 +32,7 @@ function Matrix() {
           this.content[row][col] = arguments[0][row][col];
         }
       } else {
-        throw 'Input Array is not a matrix. Check the ' + row + 'row.';
+        throw 'Input Array is not a matrix. Check the ' + row + ' row.';
       }
     }
 
