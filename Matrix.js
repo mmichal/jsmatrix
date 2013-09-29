@@ -7,7 +7,7 @@ function Matrix() {
   if (arguments[0] instanceof Matrix) {
     var array = arguments[0].content;
 
-    for (var row = 0; array.length; row++) {
+    for (var row = 0; row < array.length; row++) {
       this.content.push(array[row].slice(0));
     }
 
