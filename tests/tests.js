@@ -51,3 +51,19 @@ test("matrix creation - from array", function() {
 
 });
 
+test("matrix creation - from another matrix", function() {
+  var matrix1 = new Matrix(
+    [
+      [ 0, 1, 2 ],
+      [ 3, 4, 5 ],
+      [ 6, 7, 8 ]
+    ]);
+
+  var matrix2 = new Matrix(matrix1)
+  deepEqual(
+    matrix1.content,
+    matrix2.content
+  );
+
+});
+
